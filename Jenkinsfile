@@ -1,3 +1,5 @@
 @Library('kloudtek-pipelinelib') _
 
-mavenRelease
+echo "Building"
+mavenRelease()
+echo "Building finished"
