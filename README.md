@@ -4,6 +4,8 @@ This library contains the following plugins:
 
 ## ELJsonLayout
 
+### Overview
+
 This is a Yet Another log4j2 json layout which has a couple advantages over the other ones out there:
 
 First, it doesn't has any dependencies which avoid library conflicts (ie all the other json libraries I tried wouldn't
@@ -46,6 +48,33 @@ it would generate:
     "foo": "bar",
     "obj": {}
 }
+```
+
+### Example configuration
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+    <Appenders>
+        <RollingFile name="file" fileName="mytest.log" 
+                 filePattern="mytest-%i.log">
+            <ELJsonLayout/>
+            <SizeBasedTriggeringPolicy size="10 MB" />
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <AsyncRoot level="INFO">
+            <AppenderRef ref="file" />
+        </AsyncRoot>
+    </Loggers>
+</Configuration>
+```
+
+In some cases with complex classloading (ie. mule applications) you might have to specify the package
+
+```xml
+<Configuration packages="com.kloudtek.elogging.log4j2">
 ```
 
 ## ELMemoryAppender
