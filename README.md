@@ -13,7 +13,7 @@ work with mule due to conflicts w/ jackson libraries)
 
 Second, it supports MapMessage to generate a json message with multiples attributes. Additionally when using a MapMessage,
 you can specify that a value in the message map should be included as "raw json" by adding another key/value with the
-same key appended with "_$_rawjson_$_", with the value of "true"
+same key appended with "\_$\_rawjson\_$\_", with the value of "true"
 
 so for example the following key/values:
 
