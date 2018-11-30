@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kloudtek.elogging</groupId>
     <artifactId>elogging-log4j2</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <name>ELogging Log4j plugins</name>
     <url>https://github.com/kloudtek/elogging-log4j2</url>
     <description>Log4j2 plugins library</description>
